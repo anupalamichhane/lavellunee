@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #2e3444;
+  color: #dbe1ea;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background-color: #3d475e;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #8c9db8;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #bcc8db;
+  margin-bottom: 1rem;
+}
+
+/* Timer Section */
+.timer {
+  text-align: center;
+}
+
+.coffee-mug {
+  position: relative;
+  margin: auto;
+  width: 120px;
+  height: 160px;
+}
+
+.glass-text {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #8c9db8;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #5d6b81;
+  background-color: #5d6b81;
+  color: #f2f4f7;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #7c8ca5;
+}
+
+/* Playlist and Affirmations */
+.playlist-affirmation {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.playlist,
+.affirmation {
+  flex: 1;
+  background: #46516a;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.affirmation button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #5d6b81;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.affirmation button:hover {
+  background: #7c8ca5;
+}
+
+#themeSelector {
+  padding: 0.6rem;
+  background-color: #60779f;
+  color: #d4d9e0;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 0 8px #7492B1aa;
+  cursor: pointer;
+}
+
+#themeSelector:focus {
+  outline: 1px solid #7492B1;
+}
+
+/* Planner */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #414d65;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #59647a;
+  text-align: center;
+  color: #dee5ef;
+}
+
+td[contenteditable] {
+  background-color: #4b5770;
+}
+
+/* To-Do and Notes */
+.notes-todo {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.todo,
+.notes {
+  flex: 1;
+}
+
+#todoList {
+  list-style: none;
+  margin-bottom: 1rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+#todoList li {
+  background: #4b5770;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todoList li button {
+  background: none;
+  border: none;
+  color: #e07070;
+  cursor: pointer;
+}
+
+#todoInput {
+  width: 100%;
+  padding: 0.5rem;
+  background: #5d6b81;
+  border: 1px solid #7989a0;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 0;
+}
+
+/* Enlarge Notes & To-Do areas */
+.notes-todo {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.todo,
+.notes {
+  flex: 1 1 45%;
+  min-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo h2,
+.notes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#todoInput {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.todo button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+#todoList {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-bottom: 1rem;
+}
+
+.notes textarea {
+  flex-grow: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  resize: vertical;
+  min-height: 200px;
+}
+
+#fileList {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 120px;
+  margin-top: 0.5rem;
+}
+
+/* Popup Styles */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background-color: #46516a;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 80%;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: #e07070;
+}
